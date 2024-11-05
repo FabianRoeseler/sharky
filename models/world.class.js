@@ -5,6 +5,7 @@ class World {
   backgroundObjects = [
     new BackgroundObject("img/3.Background/Layers/5.Water/D.png", 0, 0),
     new BackgroundObject("img/3.Background/Layers/3.Fondo1/D1.png", 0, 0),
+    new BackgroundObject("img/3.Background/Layers/2.Floor/L1.png", 0, 0),
   ];
   canvas;
   ctx;

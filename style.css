@@ -1,9 +1,28 @@
+@font-face {
+  font-family: "Sharky";
+  src: url(img/5.Font/LuckiestGuy-Regular.ttf);
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("img/sharkybg.webp");
+  background-repeat: no-repeat;
+  background-size: stretch;
 }
 
 canvas {
   background-color: black;
+  border: 4px solid black;
+  border-radius: 10px;
+}
+
+h1 {
+  font-family: Sharky;
+  font-weight: bold;
+  font-size: 60px;
 }

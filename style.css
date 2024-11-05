@@ -19,6 +19,7 @@ canvas {
   background-color: black;
   border: 4px solid black;
   border-radius: 10px;
+  box-shadow: 0 0 50px black;
 }
 
 h1 {

@@ -17,31 +17,22 @@ class World {
   draw() {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
-    // Background
-    for (let index = 0; index < this.backgroundObjects.length; index++) {
-      const backgroundObject = this.backgroundObjects[index];
-      this.addToMap(backgroundObject);
-    }
-
-    // Character
+    this.addObjectsToMap(this.backgroundObjects);
+    this.addObjectsToMap(this.lights);
+    this.addObjectsToMap(this.enemies);
     this.addToMap(this.character);
-
-    // Lights
-    for (let index = 0; index < this.lights.length; index++) {
-      const light = this.lights[index];
-      this.addToMap(light);
-    }
-
-    // Enemies
-    for (let index = 0; index < this.enemies.length; index++) {
-      const fish = this.enemies[index];
-      this.addToMap(fish);
-    }
 
     let self = this;
     requestAnimationFrame(function () {
       self.draw();
     });
+  }
+
+  addObjectsToMap(objects) {
+    for (let index = 0; index < objects.length; index++) {
+      const object = objects[index];
+      this.addToMap(object);
+    }
   }
 
   addToMap(mo) {

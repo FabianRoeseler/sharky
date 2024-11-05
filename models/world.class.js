@@ -1,6 +1,7 @@
 class World {
   character = new Character();
   enemies = [new Fish(), new Fish(), new Fish(), new Fish()];
+  lights = [new Light(), new Light(), new Light(), new Light()];
   canvas;
   ctx;
 
@@ -19,6 +20,17 @@ class World {
       this.character.height,
       this.character.width
     );
+
+    for (let index = 0; index < this.lights.length; index++) {
+      const element = this.lights[index];
+      this.ctx.drawImage(
+        element.img,
+        element.x,
+        element.y,
+        element.height,
+        element.width
+      );
+    }
 
     for (let index = 0; index < this.enemies.length; index++) {
       const element = this.enemies[index];

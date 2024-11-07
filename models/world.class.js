@@ -1,7 +1,19 @@
 class World {
   character = new Character();
-  enemies = [new Fish(), new Fish(), new Fish(), new Fish()];
-  lights = [new Light(), new Light(), new Light(), new Light()];
+  enemies = [
+    new Fish(),
+    new Fish(),
+    new Fish(),
+    new Fish(),
+    new Fish(),
+    new Fish(),
+    new Fish(),
+    new Fish(),
+    new Fish(),
+    new Fish(),
+    new Fish(),
+  ];
+  lights = [new Light(), new Light(), new Light()];
   backgroundObjects = [
     new BackgroundObject("img/3.Background/Layers/5.Water/D.png", 0, 0),
     new BackgroundObject("img/3.Background/Layers/3.Fondo1/D1.png", 0, 0),

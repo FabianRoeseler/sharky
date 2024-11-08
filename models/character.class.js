@@ -9,6 +9,13 @@ class Character extends MovableObject {
     "../img/1.Sharkie/1.IDLE/7.png",
     "../img/1.Sharkie/1.IDLE/8.png",
     "../img/1.Sharkie/1.IDLE/9.png",
+    "../img/1.Sharkie/1.IDLE/8.png",
+    "../img/1.Sharkie/1.IDLE/7.png",
+    "../img/1.Sharkie/1.IDLE/6.png",
+    "../img/1.Sharkie/1.IDLE/5.png",
+    "../img/1.Sharkie/1.IDLE/4.png",
+    "../img/1.Sharkie/1.IDLE/3.png",
+    "../img/1.Sharkie/1.IDLE/2.png",
   ];
 
   currentImage = 0;

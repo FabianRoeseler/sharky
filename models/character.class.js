@@ -18,7 +18,6 @@ class Character extends MovableObject {
     "../img/1.Sharkie/1.IDLE/2.png",
   ];
 
-  currentImage = 0;
   constructor() {
     super().loadImage("../img/1.Sharkie/1.IDLE/1.png");
     this.loadImages(this.IMAGES_IDLE);
@@ -32,7 +31,7 @@ class Character extends MovableObject {
       let path = this.IMAGES_IDLE[i];
       this.img = this.imageCache[path];
       this.currentImage++;
-    }, 300);
+    }, 2300);
   }
 
   shoot() {}

@@ -17,14 +17,18 @@ class World {
   lights = [new Light(), new Light(), new Light()];
 
   backgroundObjects = [
-    new BackgroundObject("img/3.Background/Layers/5.Water/D.png", 0, 0),
+    new BackgroundObject("img/3.Background/Layers/5.Water/D1.png", 0, 0),
     new BackgroundObject("img/3.Background/Layers/3.Fondo1/D1.png", 0, 0),
     new BackgroundObject("img/3.Background/Layers/2.Floor/L1.png", 0, 0),
+    new BackgroundObject("img/3.Background/Layers/5.Water/D2.png", 718, 0),
+    new BackgroundObject("img/3.Background/Layers/3.Fondo1/D2.png", 718, 0),
+    new BackgroundObject("img/3.Background/Layers/2.Floor/L2.png", 718, 0),
   ];
 
   canvas;
   ctx;
   keyboard;
+  camera_x = 0;
 
   constructor(canvas, keyboard) {
     this.ctx = canvas.getContext("2d");
@@ -41,10 +45,14 @@ class World {
   draw() {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
+    this.ctx.translate(this.camera_x, 0);
+
     this.addObjectsToMap(this.backgroundObjects);
     this.addObjectsToMap(this.lights);
     this.addObjectsToMap(this.enemies);
     this.addToMap(this.character);
+
+    this.ctx.translate(-this.camera_x, 0);
 
     let self = this;
     requestAnimationFrame(function () {

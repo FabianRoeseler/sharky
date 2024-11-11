@@ -16,6 +16,7 @@ const level1 = new Level(
     new Jellyfishbadtwo(),
     new Jellyfishbadtwo(),
     new Jellyfishbadtwo(),
+    new Boss(),
   ],
   [new Light(), new Light(), new Light()],
   [

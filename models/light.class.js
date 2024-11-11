@@ -5,7 +5,7 @@ class Light extends MovableObject {
   constructor() {
     super().loadImage("../img/3.Background/Layers/1.Light/1.png");
 
-    this.x = Math.random() * 1200;
+    this.x = Math.random() * 3000;
 
     this.moving();
   }

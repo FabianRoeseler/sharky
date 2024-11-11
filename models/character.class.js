@@ -28,7 +28,8 @@ class Character extends MovableObject {
   ];
 
   world;
-  speed = 2.5;
+  x = 50;
+  speed = 6.5;
 
   constructor() {
     super().loadImage("../img/1.Sharkie/3.Swim/1.png");
@@ -39,13 +40,13 @@ class Character extends MovableObject {
 
   animate() {
     setInterval(() => {
-      if (this.world.keyboard.RIGHT) {
+      if (this.world.keyboard.RIGHT && this.x < 2200) {
         this.x += this.speed;
         this.otherDirection = false;
         this.world.camera_x -= this.speed;
       }
 
-      if (this.world.keyboard.LEFT) {
+      if (this.world.keyboard.LEFT && this.x > 50) {
         this.x -= this.speed;
         this.otherDirection = true;
         this.world.camera_x += this.speed;

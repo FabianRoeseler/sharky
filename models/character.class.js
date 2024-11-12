@@ -30,6 +30,7 @@ class Character extends MovableObject {
   world;
   x = 50;
   speed = 6.5;
+  swimming_sound = new Audio("audio/swimming.wav");
 
   constructor() {
     super().loadImage("../img/1.Sharkie/3.Swim/1.png");
@@ -40,14 +41,17 @@ class Character extends MovableObject {
 
   animate() {
     setInterval(() => {
+      this.swimming_sound.pause();
       if (this.world.keyboard.RIGHT && this.x < 2200) {
         this.x += this.speed;
+        this.swimming_sound.play();
         this.otherDirection = false;
         this.world.camera_x -= this.speed;
       }
 
       if (this.world.keyboard.LEFT && this.x > 50) {
         this.x -= this.speed;
+        this.swimming_sound.play();
         this.otherDirection = true;
         this.world.camera_x += this.speed;
       }
